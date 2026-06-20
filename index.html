@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Veridiqa — Verified Intelligence for Pharma | Nexus Prism</title>
-<meta name="description" content="Veridiqa turns the market data you already own into verified, decision-ready intelligence — scored, prioritized and ready to act on. Flagship platform: Nexus Prism. Any market, any therapy area.">
+<title>Veridiqa — Verified Intelligence for Pharma | Nexus Prism, Tempo &amp; Vela</title>
+<meta name="description" content="Veridiqa turns pharma's biggest judgment calls into scored, defensible intelligence. Nexus Prism ranks your portfolio, Tempo measures execution, and Vela runs the HCP event journey. One connected suite — decide, execute, engage.">
 <meta name="keywords" content="pharma market intelligence, IQVIA data analysis, portfolio scoring, commercial intelligence, Nexus Prism, decision intelligence, pharmaceutical analytics, portfolio management">
 <meta name="author" content="Veridiqa">
 <meta name="robots" content="index, follow">
@@ -326,6 +326,24 @@ body.anim .scr.in svg{opacity:1;transform:none}
 .skip{position:absolute;left:-999px;top:0;z-index:200;background:var(--gold);color:#241a06;padding:11px 18px;border-radius:0 0 8px 0;font-weight:600}
 .skip:focus{left:0}
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--goldL);outline-offset:2px;border-radius:4px}
+/* === nexus suite === */
+.suiteflag{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:center;background:var(--bg);border:2px solid var(--gold);border-radius:18px;padding:32px;margin-top:42px;box-shadow:0 20px 50px rgba(20,35,63,.1)}
+@media(max-width:760px){.suiteflag{grid-template-columns:1fr;text-align:center}}
+.suitetwo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+@media(max-width:640px){.suitetwo{grid-template-columns:1fr}}
+.suitecard{background:#fff;border:1px solid #e7ebf2;border-radius:16px;padding:28px;text-align:center;transition:transform .18s,box-shadow .18s}
+.suitecard:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,35,63,.12)}
+[data-theme="dark"] .suitecard,[data-theme="dark"] .suiteflag{background:#0f1f3d;border-color:#243a63}
+[data-theme="dark"] .suiteflag{border-color:var(--gold)}
+.suitetile{background:var(--navy);border-radius:16px;display:inline-flex;align-items:center;justify-content:center;padding:14px}
+.suitebadge{display:inline-block;background:var(--gold);color:#241a06;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.suiterole{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);margin-top:10px}
+.suiteh{color:var(--navy);font-weight:600}
+[data-theme="dark"] .suiteh{color:#eaf0fa}
+.suitesay{color:var(--gold);font-style:italic;font-size:14.5px;margin:6px 0 10px}
+.suitep{color:var(--mut);font-size:14px;line-height:1.65}
+.suitelist{list-style:none;margin:12px 0 0;padding:0;text-align:left;display:inline-block}
+.suitelist li{font-size:13px;color:var(--mut);padding:4px 0;display:flex;gap:8px}.suitelist li span{color:var(--gold);font-weight:700}
 </style>
 </head>
 <body>
@@ -339,6 +357,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   <button class="navtoggle" aria-label="Open menu" onclick="document.body.classList.toggle('navopen')">&#9776;</button>
   <div class="navlinks" onclick="document.body.classList.remove('navopen')">
     <a href="#about">About</a>
+    <a href="#suite">Products</a>
     <a href="#solutions">Solutions</a>
     <a href="#prism">Nexus Prism</a>
     <a href="#preview">Platform</a>
@@ -365,7 +384,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 <section class="sec why" id="about"><div class="wrap">
   <span class="eyebrow">About us</span>
   <h2>Who we are.</h2>
-  <p style="color:var(--mut);max-width:760px;margin-top:12px;font-size:17px">Veridiqa is a specialist, pharma-native commercial-intelligence company headquartered in Riyadh, Saudi Arabia, working with clients across any market and therapy area. We turn the market data you already own into verified, decision-ready intelligence &mdash; delivered through our flagship platform, Nexus Prism. We don&rsquo;t sell data or dashboards; we hand you the decision.</p>
+  <p style="color:var(--mut);max-width:780px;margin-top:12px;font-size:17px">Veridiqa is a decision-intelligence company for pharmaceutical commercial leaders, headquartered in Riyadh, Saudi Arabia and working across any market. We remove the guesswork from the three decisions that quietly decide a company&rsquo;s year &mdash; <strong style="color:var(--ink)">which products to back, how well the strategy is delivered, and how to engage healthcare professionals</strong>. Every recommendation carries a transparent score, and every score an auditable rationale. We don&rsquo;t sell data or dashboards; we hand you the decision.</p>
   <div class="cards">
     <div class="card"><div class="ic"><span>&#9673;</span></div><h3>Our vision</h3><p>To become the trusted decision layer for pharma &mdash; where every commercial decision is backed by verified evidence, not guesswork.</p></div>
     <div class="card"><div class="ic"><span>&#10138;</span></div><h3>Our mission</h3><p>To turn the data our clients already own into clear, scored, defensible decisions &mdash; fast, confidential, and tailored to each market and therapy area.</p></div>
@@ -378,6 +397,81 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
       </ul>
     </div>
   </div>
+</div></section>
+
+<section class="sec" id="suite"><div class="wrap">
+  <span class="eyebrow">The Nexus suite</span>
+  <h2>One company. Three connected tools.</h2>
+  <p style="color:var(--mut);max-width:740px;margin-top:10px">One connected suite covering the full arc of commercial pharma &mdash; <strong style="color:var(--ink)">decide, execute, engage</strong>. Each tool turns data and experience into a transparent, defensible score. Compliance-first and bilingual (EN / AR).</p>
+
+  <div class="suiteflag">
+    <div style="text-align:center"><div class="suitetile">
+      <svg width="150" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-label="Nexus Prism">
+        <ellipse cx="120" cy="124" rx="104" ry="60" fill="none" stroke="#C7CED8" stroke-width="2.5" opacity="0.55"/>
+        <ellipse cx="120" cy="124" rx="104" ry="60" fill="none" stroke="#E2A33C" stroke-width="1.6" opacity="0.5" transform="rotate(-12 120 124)"/>
+        <polygon points="120,52 168,150 72,150" fill="#0E2143" stroke="#C7CED8" stroke-width="3.2" stroke-linejoin="round"/>
+        <polygon points="120,52 120,150 72,150" fill="#C7CED8" opacity="0.16"/>
+        <polygon points="120,52 144,150 120,150" fill="#7F8B9C" opacity="0.22"/>
+        <g stroke-width="3.4" stroke-linecap="round"><line x1="150" y1="132" x2="214" y2="104" stroke="#F2C14E"/><line x1="152" y1="138" x2="216" y2="124" stroke="#E2A33C"/><line x1="154" y1="144" x2="214" y2="146" stroke="#B8862F"/></g>
+        <g fill="#F2C14E"><circle cx="206" cy="100" r="3.4"/><circle cx="222" cy="112" r="2.6"/><circle cx="214" cy="128" r="3"/><circle cx="226" cy="138" r="2.4"/><circle cx="208" cy="146" r="2.8"/></g>
+        <g stroke="#E2A33C" stroke-width="1.2" opacity="0.7"><line x1="206" y1="100" x2="222" y2="112"/><line x1="222" y1="112" x2="214" y2="128"/><line x1="214" y1="128" x2="226" y2="138"/><line x1="214" y1="128" x2="208" y2="146"/></g>
+      </svg>
+    </div></div>
+    <div>
+      <span class="suitebadge">Flagship</span>
+      <div class="suiterole">Nexus Prism · Strategy</div>
+      <h3 class="suiteh" style="font-size:24px;margin:4px 0">Nexus Prism</h3>
+      <div class="suitesay">&ldquo;See your whole portfolio — ranked, scored, defensible.&rdquo;</div>
+      <p class="suitep" style="max-width:560px">Portfolio prioritisation intelligence. A single transparent <strong style="color:var(--ink)">0–100 PRISM Score</strong> per product — across market, competition, access, fit and momentum — sorted into clear tiers (T1–T6) and linked to live market data. Leadership leaves with a ranking they can defend, and a reason behind every number.</p>
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#prism" class="btn btn-gold" style="padding:11px 22px">Explore Nexus Prism</a>
+        <a href="https://veridiqa-app.github.io/app/veridiqa-demo.html" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:11px 22px;border-color:#cdd3df;color:var(--navy)">Try the live demo &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="suitetwo">
+    <div class="suitecard">
+      <div class="suitetile"><svg width="78" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Nexus Tempo">
+        <rect x="40" y="142" width="120" height="2.6" rx="1.3" fill="#C7CED8" opacity="0.3"/>
+        <rect x="48" y="104" width="16" height="38" rx="4" fill="#9AA6B5"/><rect x="48" y="104" width="16" height="9" rx="4" fill="#E2A33C"/>
+        <rect x="74" y="78" width="16" height="64" rx="4" fill="#C7CED8"/><rect x="74" y="78" width="16" height="9" rx="4" fill="#F2C14E"/>
+        <rect x="100" y="92" width="16" height="50" rx="4" fill="#9AA6B5"/><rect x="100" y="92" width="16" height="9" rx="4" fill="#E2A33C"/>
+        <rect x="126" y="62" width="16" height="80" rx="4" fill="#C7CED8"/><rect x="126" y="62" width="16" height="9" rx="4" fill="#F2C14E"/>
+        <polyline points="56,104 82,78 108,92 134,62" fill="none" stroke="#F2C14E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="134" cy="62" r="5" fill="#F2C14E"/>
+      </svg></div>
+      <div class="suiterole" style="margin-top:14px">Nexus Tempo · Execution</div>
+      <h3 class="suiteh" style="font-size:19px;margin:4px 0">Nexus Tempo</h3>
+      <div class="suitesay">&ldquo;Turn strategy into execution you can measure.&rdquo;</div>
+      <p class="suitep">The operational twin of Prism — a single <strong style="color:var(--ink)">0–100 Execution Intelligence Index</strong> showing whether the strategy is actually being delivered: momentum, rhythm and follow-through, with early warning on drift.</p>
+      <ul class="suitelist">
+        <li><span>&#10003;</span> 0–100 Execution Intelligence Index</li>
+        <li><span>&#10003;</span> Early warning on drift &amp; momentum</li>
+        <li><span>&#10003;</span> Keeps strategy and the field aligned</li>
+      </ul>
+    </div>
+    <div class="suitecard">
+      <div class="suitetile"><svg width="78" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Nexus Vela">
+        <path d="M44 150 q19 -9 38 0 t38 0 t38 0" fill="none" stroke="#E2A33C" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+        <line x1="90" y1="46" x2="90" y2="150" stroke="#E2A33C" stroke-width="4" stroke-linecap="round"/>
+        <path d="M90 52 C 142 72, 152 120, 132 150 L90 150 Z" fill="#C7CED8"/>
+        <path d="M90 86 C 112 102, 118 128, 114 150 L90 150 Z" fill="#9AA6B5"/>
+        <path d="M86 64 C 58 96, 54 130, 62 150 L86 150 Z" fill="#7F8B9C"/>
+        <path d="M86 52 C 138 72, 148 120, 132 150" fill="none" stroke="#F2C14E" stroke-width="2" opacity="0.8"/>
+        <path d="M124 40 l4.5 12 12 4.5 -12 4.5 -4.5 12 -4.5 -12 -12 -4.5 12 -4.5 z" fill="#F2C14E"/>
+      </svg></div>
+      <div class="suiterole" style="margin-top:14px">Nexus Vela · Engagement</div>
+      <h3 class="suiteh" style="font-size:19px;margin:4px 0">Nexus Vela</h3>
+      <div class="suitesay">&ldquo;Navigate every HCP journey — invitation to insight.&rdquo;</div>
+      <p class="suitep">Runs the human moment with healthcare professionals — a destination-smart event companion, effortless multi-activity check-in with live dashboards, and compliant feedback. White-label per customer.</p>
+      <ul class="suitelist">
+        <li><span>&#10003;</span> Smart attendee app + organiser dashboards</li>
+        <li><span>&#10003;</span> Compliant feedback (CSAT · science vs experience · NPS)</li>
+        <li><span>&#10003;</span> White-label · installable · bilingual</li>
+      </ul>
+    </div>
+  </div>
+  <p style="text-align:center;color:var(--navy);font-weight:600;font-size:17px;margin-top:34px"><strong style="color:var(--ink)">Prism</strong> gives you clarity · <strong style="color:var(--ink)">Tempo</strong> gives you momentum · <strong style="color:var(--ink)">Vela</strong> gives you the human moment.</p>
 </div></section>
 
 <section class="sec" id="solutions"><div class="wrap">
@@ -395,19 +489,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 </div></section>
 
 <section class="sec" id="services"><div class="wrap">
-  <span class="eyebrow">What we do</span>
-  <h2>Two capabilities, one accountable partner.</h2>
+  <span class="eyebrow">How we work</span>
+  <h2>Four ways we turn intelligence into value.</h2>
   <div class="cards">
-    <div class="card">
-      <div class="ic"><span>&#9650;</span></div>
-      <h3>Intelligence &amp; Analytics</h3>
-      <p>You provide your market data; we turn it into clear, decision-ready insight — revealing the angles competitors and even the data owners miss. Delivered through the Nexus Prism platform and bespoke Excel, PowerPoint and Power BI.</p>
-    </div>
-    <div class="card">
-      <div class="ic"><span>&#10138;</span></div>
-      <h3>Decision Support &amp; Advisory</h3>
-      <p>We turn the analysis into prioritized, board-ready recommendations — the clear "so what, now do this" that moves data into confident decisions.</p>
-    </div>
+    <div class="card"><div class="ic"><span>&#9650;</span></div><h3>Strategy Intelligence</h3><p>Portfolio scoring, prioritisation and board-ready decision packs &mdash; powered by <strong>Nexus Prism</strong>.</p></div>
+    <div class="card"><div class="ic"><span>&#8635;</span></div><h3>Execution Intelligence</h3><p>Translate strategy into a measured, trackable delivery rhythm &mdash; powered by <strong>Nexus Tempo</strong>.</p></div>
+    <div class="card"><div class="ic"><span>&#9788;</span></div><h3>Engagement Intelligence</h3><p>Run compliant, premium HCP events that produce real attendance evidence and experience insight &mdash; powered by <strong>Nexus Vela</strong>.</p></div>
+    <div class="card"><div class="ic"><span>&#10138;</span></div><h3>Advisory &amp; Implementation</h3><p>Onboarding, white-label branding per client and ongoing support &mdash; compliance-first and bilingual.</p></div>
   </div>
 </div></section>
 
@@ -818,7 +906,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   if(tbtn)tbtn.onclick=function(e){e.stopPropagation();var dark=document.documentElement.getAttribute('data-theme')==='dark';if(dark){document.documentElement.removeAttribute('data-theme');try{localStorage.setItem('vq-theme','light');}catch(x){}}else{document.documentElement.setAttribute('data-theme','dark');try{localStorage.setItem('vq-theme','dark');}catch(x){}}lbl();};
   var tt=document.getElementById('toTop');
   if(tt){tt.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};window.addEventListener('scroll',function(){if((window.scrollY||document.documentElement.scrollTop)>600)tt.classList.add('show');else tt.classList.remove('show');},{passive:true});}
-  if('IntersectionObserver' in window){var spy=document.querySelectorAll('.navlinks a[href^="#"]');var secs=['about','solutions','prism','preview','trust'];var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;spy.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('active',on);if(on){a.setAttribute('aria-current','true');}else{a.removeAttribute('aria-current');}});}});},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(id){var el=document.getElementById(id);if(el)ob.observe(el);});}
+  if('IntersectionObserver' in window){var spy=document.querySelectorAll('.navlinks a[href^="#"]');var secs=['about','suite','solutions','prism','preview','trust'];var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;spy.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('active',on);if(on){a.setAttribute('aria-current','true');}else{a.removeAttribute('aria-current');}});}});},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(id){var el=document.getElementById(id);if(el)ob.observe(el);});}
   function countUp(el){var n=parseFloat(el.getAttribute('data-count'))||0;var suf=el.getAttribute('data-suf')||'';var s=0,step=n/45;var id=setInterval(function(){s+=step;if(s>=n){s=n;clearInterval(id);}el.textContent=Math.round(s)+suf;},22);}
   function typeAI(el){var t=el.getAttribute('data-text')||'';var i=0;var id=setInterval(function(){el.textContent=t.slice(0,i++);if(i>t.length){clearInterval(id);var c=el.nextElementSibling;if(c&&c.classList.contains('cursor'))c.style.display='none';}},16);}
   var c=document.getElementById('neural');
@@ -867,10 +955,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
    {k:['market','therapy','geography','country','region','global','where ','ksa','gcc','international'],a:"Any market and any therapy area — Veridiqa works with the market data you already license, so it isn't tied to one geography. We're headquartered in Riyadh, Saudi Arabia and serve clients globally."},
    {k:['proof','evidence','reliable','trust','accurate','verified','how do i know'],a:"Every figure traces back to the data you provided, and outputs are evidence-flagged. Where data is incomplete we flag it rather than fill the gap — no fabricated numbers, ever. Start with a single Market Audit and see the value on your own data before any commitment."},
    {k:['nexus','prism','product','platform','tool','what is the platform'],a:"Nexus Prism is our flagship platform — your branded decision tool. It connects your market data and refracts it into ranked, scored insight across six solutions, with portfolio tiers, head-to-head, opportunity radar and an action map. From Data to Decisions."},
-   {k:['what is veridiqa','about veridiqa','who are you','who is veridiqa','what do you do','what does veridiqa','about you'],a:"Veridiqa is a specialist, pharma-native commercial-intelligence company. We turn the market data you already own into verified, decision-ready intelligence — scored and prioritised. We don't sell data or dashboards; we hand you the decision. Our flagship platform is Nexus Prism."},
+   {k:['tempo','execution','eii','momentum','delivery','drift','follow-through'],a:"Nexus Tempo is our execution-intelligence tool — the operational twin of Prism. It scores whether your strategy is actually being delivered as a single 0–100 Execution Intelligence Index (EII): momentum, rhythm and follow-through, with early warning on drift."},
+   {k:['vela','event','hcp','congress','attendee','engagement','feedback','meeting'],a:"Nexus Vela runs the human moment with healthcare professionals — a destination-smart event companion (agenda, hotel, travel), effortless multi-activity check-in with live organiser dashboards, and compliant feedback (CSAT, science vs experience, NPS). White-label per customer."},
+   {k:['suite','three','how many product','other tool','what else','range','vela or tempo','full suite'],a:"Veridiqa is one connected suite — Nexus — covering the full arc of commercial pharma: decide, execute, engage. Nexus Prism (flagship) ranks your portfolio, Nexus Tempo measures execution, and Nexus Vela runs the HCP event journey. Each gives a transparent, defensible score."},
+   {k:['what is veridiqa','about veridiqa','who are you','who is veridiqa','what do you do','what does veridiqa','about you'],a:"Veridiqa is a decision-intelligence company for pharma commercial leaders. Our connected Nexus suite covers three big decisions — which products to back (Nexus Prism), how well strategy is delivered (Nexus Tempo), and how to engage HCPs (Nexus Vela). Every recommendation carries a transparent, defensible score. Flagship: Nexus Prism."},
    {k:['demo','book','contact','call','email','talk','reach','get in touch','meeting','speak to'],a:"Happy to help — book a 30-minute walkthrough and we'll show your own market through Veridiqa, tailored to your portfolio. Or explore the live demo right now.|demo|cta"}
   ];
-  var SUG=[['What makes you different?'],['What is Nexus Prism?'],['What do I get?'],['How fast is it?'],['Pricing'],['Data security'],['Book a demo']];
+  var SUG=[['What makes you different?'],['What is Nexus Prism?'],['The Nexus suite'],['What do I get?'],['How fast is it?'],['Pricing'],['Data security'],['Book a demo']];
   var box=document.getElementById('chatbox'),fab=document.getElementById('chatfab'),body=document.getElementById('cbbody'),chips=document.getElementById('cbchips'),input=document.getElementById('cbinput'),send=document.getElementById('cbsend'),xb=document.getElementById('cbx');
   if(!box||!fab)return;
   var greeted=false;
