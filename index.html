@@ -19,6 +19,7 @@
 <meta property="og:image" content="https://veridiqa.net/og_veridiqa.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Veridiqa — Verified Intelligence for Pharma">
 <meta name="twitter:description" content="Your market data already knows where to win. Veridiqa makes it speak — verified, scored, decision-ready. Flagship: Nexus Prism.">
@@ -138,7 +139,13 @@ footer .brand{font-size:16px}
 .tbl{width:100%;border-collapse:collapse;font-size:13px}
 .tbl td{padding:9px 4px;border-top:1px solid #233c63;color:#cdd6e6}
 .badge{font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px}
-.b-flag{background:var(--gold);color:#241a06}.b-grow{background:#2b4a7e;color:#cfe0ff}.b-core{background:#26406e;color:#bcd0f2}.b-watch{background:#46324f;color:#ecd0ff}
+.b-flag{background:var(--gold);color:#241a06}.b-grow{background:#2b4a7e;color:#cfe0ff}.b-core{background:#26406e;color:#bcd0f2}.b-watch{background:#46324f;color:#ecd0ff}.b-tac{background:#1f3a4d;color:#bfe3f0}
+.psel{display:inline-flex;gap:3px;margin-left:auto;background:#0e1f40;border:1px solid #284268;border-radius:16px;padding:2px}
+.psel .pbtn{background:none;border:none;color:#8fa0bd;font:inherit;font-size:9.5px;letter-spacing:.8px;font-weight:600;padding:3px 9px;border-radius:13px;cursor:pointer;transition:.15s}
+.psel .pbtn.active{background:var(--gold);color:#241a06}
+.psel .pbtn:hover:not(.active){color:#e2ebf8}
+.barx{display:flex;gap:9px;margin:-8px 0 14px}
+.barx span{flex:1;text-align:center;font-size:9.5px;color:#8fa0bd;letter-spacing:.5px}
 .chat .msg{max-width:90%;padding:11px 14px;border-radius:13px;margin:11px 0;font-size:13px;line-height:1.55}
 .chat .u{background:#1b2f57;color:#e2ebf8;margin-left:auto;border-bottom-right-radius:3px}
 .chat .a{background:#11244a;border:1px solid #28406b;color:#cdd6e6;border-bottom-left-radius:3px}
@@ -354,8 +361,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 
 <nav><div class="wrap">
   <a class="brand" href="#top"><img src="v_logo.png" alt="Veridiqa"> VERIDIQA</a>
-  <button class="navtoggle" aria-label="Open menu" onclick="document.body.classList.toggle('navopen')">&#9776;</button>
-  <div class="navlinks" onclick="document.body.classList.remove('navopen')">
+  <button class="navtoggle" aria-label="Open menu" aria-expanded="false" onclick="var o=document.body.classList.toggle('navopen');this.setAttribute('aria-expanded',o?'true':'false')">&#9776;</button>
+  <div class="navlinks" onclick="document.body.classList.remove('navopen');var _t=document.querySelector('.navtoggle');if(_t)_t.setAttribute('aria-expanded','false')">
     <a href="#about">About</a>
     <a href="#suite">Products</a>
     <a href="#solutions">Solutions</a>
@@ -368,7 +375,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 </div></nav>
 
 <main id="main" tabindex="-1">
-<header class="hero" id="top"><canvas id="neural"></canvas><div class="wrap"><div class="grid">
+<header class="hero" id="top"><canvas id="neural" aria-hidden="true"></canvas><div class="wrap"><div class="grid">
   <div>
     <span class="aibadge"><span class="dot"></span>AI-powered decision intelligence</span>
     <h1>Your market data already knows where to win. We <span class="shine">make it speak.</span></h1>
@@ -407,13 +414,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 
   <div class="suiteflag">
     <div style="text-align:center"><div class="suitetile">
-      <img src="np_logo.png" alt="Nexus Prism logo" width="150" height="150" loading="lazy" style="width:150px;height:auto;border-radius:16px;display:block;margin:0 auto;box-shadow:0 10px 26px rgba(0,0,0,.32)">
+      <img src="prism_logo.png" alt="Nexus Prism" width="240" height="240" loading="lazy" style="width:240px;height:auto;border-radius:18px;display:block;margin:0 auto;box-shadow:0 12px 30px rgba(0,0,0,.34)">
     </div></div>
     <div>
-      <span class="suitebadge">Flagship</span>
-      <div class="suiterole">Nexus Prism · Strategy</div>
-      <h3 class="suiteh" style="font-size:24px;margin:4px 0">Nexus Prism</h3>
-      <div class="suitesay">&ldquo;See your whole portfolio — ranked, scored, defensible.&rdquo;</div>
+      <span class="suitebadge">Flagship &middot; Strategy</span>
+      <div class="suitesay" style="margin-top:12px">&ldquo;See your whole portfolio — ranked, scored, defensible.&rdquo;</div>
       <p class="suitep" style="max-width:560px">Portfolio prioritisation intelligence. A single transparent <strong style="color:var(--ink)">0–100 PRISM Score</strong> per product — across market, competition, access, fit and momentum — sorted into clear tiers (T1–T6) and linked to live market data. Leadership leaves with a ranking they can defend, and a reason behind every number.</p>
       <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
         <a href="#prism" class="btn btn-gold" style="padding:11px 22px">Explore Nexus Prism</a>
@@ -424,16 +429,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 
   <div class="suitetwo">
     <div class="suitecard">
-      <div class="suitetile"><svg width="78" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Nexus Tempo">
-        <rect x="40" y="142" width="120" height="2.6" rx="1.3" fill="#C7CED8" opacity="0.3"/>
-        <rect x="48" y="104" width="16" height="38" rx="4" fill="#9AA6B5"/><rect x="48" y="104" width="16" height="9" rx="4" fill="#E2A33C"/>
-        <rect x="74" y="78" width="16" height="64" rx="4" fill="#C7CED8"/><rect x="74" y="78" width="16" height="9" rx="4" fill="#F2C14E"/>
-        <rect x="100" y="92" width="16" height="50" rx="4" fill="#9AA6B5"/><rect x="100" y="92" width="16" height="9" rx="4" fill="#E2A33C"/>
-        <rect x="126" y="62" width="16" height="80" rx="4" fill="#C7CED8"/><rect x="126" y="62" width="16" height="9" rx="4" fill="#F2C14E"/>
-        <polyline points="56,104 82,78 108,92 134,62" fill="none" stroke="#F2C14E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="134" cy="62" r="5" fill="#F2C14E"/>
-      </svg></div>
-      <div class="suiterole" style="margin-top:14px">Nexus Tempo · Execution</div>
-      <h3 class="suiteh" style="font-size:19px;margin:4px 0">Nexus Tempo</h3>
+      <img src="tempo_logo.png" alt="Nexus Tempo" width="200" height="200" loading="lazy" style="width:200px;max-width:82%;height:auto;border-radius:16px;display:block;margin:0 auto;box-shadow:0 10px 26px rgba(0,0,0,.34)">
+      <div class="suiterole" style="margin-top:16px">Nexus Tempo · Execution</div>
       <div class="suitesay">&ldquo;Turn strategy into execution you can measure.&rdquo;</div>
       <p class="suitep">The operational twin of Prism — a single <strong style="color:var(--ink)">0–100 Execution Intelligence Index</strong> showing whether the strategy is actually being delivered: momentum, rhythm and follow-through, with early warning on drift.</p>
       <ul class="suitelist">
@@ -443,9 +440,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
       </ul>
     </div>
     <div class="suitecard">
-      <img src="vela_logo.png" alt="Nexus Vela logo" width="116" height="106" loading="lazy" style="width:116px;height:auto;border-radius:14px;display:block;margin:0 auto;box-shadow:0 8px 22px rgba(0,0,0,.35)">
-      <div class="suiterole" style="margin-top:14px">Nexus Vela · Engagement</div>
-      <h3 class="suiteh" style="font-size:19px;margin:4px 0">Nexus Vela</h3>
+      <img src="vela_logo.png" alt="Nexus Vela" width="200" height="200" loading="lazy" style="width:200px;max-width:82%;height:auto;border-radius:16px;display:block;margin:0 auto;box-shadow:0 10px 26px rgba(0,0,0,.34)">
+      <div class="suiterole" style="margin-top:16px">Nexus Vela · Engagement</div>
       <div class="suitesay">&ldquo;Navigate every HCP journey — invitation to insight.&rdquo;</div>
       <p class="suitep">Runs the human moment with healthcare professionals — a destination-smart event companion, effortless multi-activity check-in with live dashboards, and compliant feedback. White-label per customer.</p>
       <ul class="suitelist">
@@ -585,20 +581,22 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   <p style="color:#7f90b0;font-size:12.5px;margin-top:8px;font-style:italic">Interface shown with illustrative sample data for demonstration — your platform runs on the data you provide.</p>
   <div class="frames">
     <div class="win">
-      <div class="top"><span class="d" style="background:#E2A33C"></span><span class="d" style="background:#C9D1DC"></span><span class="d" style="background:#3A4E76"></span>&nbsp;NEXUS PRISM · MARKET AUDIT · YTD</div>
+      <div class="top"><span class="d" style="background:#E2A33C"></span><span class="d" style="background:#C9D1DC"></span><span class="d" style="background:#3A4E76"></span>&nbsp;NEXUS PRISM · MARKET AUDIT<span class="psel" role="tablist" aria-label="Reporting period"><button type="button" class="pbtn active" data-p="YTD" role="tab" aria-selected="true">YTD</button><button type="button" class="pbtn" data-p="MAT" role="tab" aria-selected="false">MAT</button><button type="button" class="pbtn" data-p="QTR" role="tab" aria-selected="false">QTR</button></span></div>
       <div class="body">
         <div class="kpis">
-          <div class="kpi"><span>Portfolio S-Score</span><b class="g" data-count="72" data-suf="%">0%</b></div>
-          <div class="kpi"><span>Flagship brands</span><b data-count="15">0</b></div>
-          <div class="kpi"><span>Fix-or-exit</span><b data-count="35">0</b></div>
+          <div class="kpi"><span>Portfolio S-Score · ind. avg 58%</span><b class="g" id="k-s" data-count="72" data-suf="%">0%</b></div>
+          <div class="kpi"><span>Flagship brands (T1&ndash;T2)</span><b id="k-flag" data-count="15">0</b></div>
+          <div class="kpi"><span>Fix-or-exit · of 48 assessed</span><b id="k-fix" data-count="35">0</b></div>
         </div>
-        <div class="lbl">GROWTH &times; VALUE</div>
-        <div class="bars"><i style="height:42%"></i><i style="height:66%"></i><i style="height:53%"></i><i style="height:85%"></i><i style="height:60%"></i><i style="height:74%"></i><i style="height:48%"></i></div>
+        <div class="lbl">MARKET SHARE % BY BRAND &middot; GROWTH &times; VALUE</div>
+        <div class="bars" aria-hidden="true"><i style="height:42%"></i><i style="height:66%"></i><i style="height:53%"></i><i style="height:85%"></i><i style="height:60%"></i><i style="height:74%"></i><i style="height:48%"></i></div>
+        <div class="barx" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span></div>
         <table class="tbl">
-          <tr><td>Brand A</td><td><span class="badge b-flag">STRATEGIC</span></td><td style="text-align:right;color:#fff">88%</td></tr>
-          <tr><td>Brand B</td><td><span class="badge b-grow">GROWTH DRIVER</span></td><td style="text-align:right;color:#fff">79%</td></tr>
-          <tr><td>Brand C</td><td><span class="badge b-core">CORE</span></td><td style="text-align:right;color:#fff">64%</td></tr>
-          <tr><td>Brand D</td><td><span class="badge b-watch">HARVEST</span></td><td style="text-align:right;color:#fff">33%</td></tr>
+          <tr><td>Brand A</td><td><span class="badge b-flag">STRATEGIC</span></td><td style="text-align:right;color:#fff" id="sc-a">88%</td></tr>
+          <tr><td>Brand B</td><td><span class="badge b-grow">GROWTH DRIVER</span></td><td style="text-align:right;color:#fff" id="sc-b">79%</td></tr>
+          <tr><td>Brand C</td><td><span class="badge b-core">CORE</span></td><td style="text-align:right;color:#fff" id="sc-c">64%</td></tr>
+          <tr><td>Brand E</td><td><span class="badge b-tac">TACTICAL</span></td><td style="text-align:right;color:#fff" id="sc-e">52%</td></tr>
+          <tr><td>Brand D</td><td><span class="badge b-watch">HARVEST</span></td><td style="text-align:right;color:#fff" id="sc-d">33%</td></tr>
         </table>
         <div class="lbl" style="margin-top:11px">VERIFIED INTELLIGENCE · EVERY FIGURE LABELLED <span style="color:#8fbf9f">AUDITED</span> / <span style="color:#cfe0ff">MODELED</span> / <span style="color:#e6c98a">ESTIMATED</span></div>
       </div>
@@ -607,7 +605,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
       <div class="top"><span class="d" style="background:#E2A33C"></span>&nbsp;NEXUS PRISM AI</div>
       <div class="body">
         <div class="msg u">Which brands should we defend this quarter?</div>
-        <div class="msg a"><span class="tag">INSIGHT</span><br><span id="aitype" data-text="Three assets carry the highest value-at-risk. Brand B is losing share despite a strong S-Score (79%) — prioritise the defend budget here. Opportunity: Brand F has high PRISM but low share — convert."></span><span class="cursor">▋</span></div>
+        <div class="msg a"><span class="tag">INSIGHT</span><br><span id="aitype" data-text="Three assets carry the highest value-at-risk. Brand B is losing share despite a strong S-Score (79%) — prioritise the defend budget here. Opportunity: Brand E has a solid PRISM score but under-indexes on share — convert."></span><span class="cursor">▋</span></div>
         <div class="ask"><input placeholder="Ask about your portfolio&hellip;" disabled><span>&uarr;</span></div>
       </div>
     </div>
@@ -676,7 +674,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   </div>
 </div></section>
 
-<section class="sec quote"><div class="wrap">
+<section class="sec quote" id="tagline"><div class="wrap">
   <h2>Veridiqa finds the truth. <span class="gold">Nexus Prism shows you its full spectrum.</span></h2>
 </div></section>
 
@@ -770,7 +768,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <div class="card"><div class="ic"><span>&#128737;</span></div><h3>Architected to enterprise standards</h3><p>Built around the principles behind SOC&nbsp;2 and ISO&nbsp;27001 &mdash; least-privilege access, encrypted handling and auditable processes &mdash; and we complete your security review before any data moves.</p></div>
     <div class="card"><div class="ic"><span>&#127757;</span></div><h3>Your residency, your rules</h3><p>We work within your data-residency and handling requirements, sign your DPA, and align with GDPR and healthcare data-protection standards.</p></div>
   </div>
-  <div style="margin-top:26px;text-align:center"><a href="#contact" class="btn btn-gold">Request our Security &amp; DPA pack</a> <span style="color:#9aa6bd;font-size:12.5px;margin-left:8px">for IT &amp; procurement teams</span></div>
+  <div style="margin-top:26px;text-align:center"><a href="mailto:contact@veridiqa.net?subject=Security%20%26%20DPA%20Pack%20Request&amp;body=Please%20send%20the%20Veridiqa%20Security%20%26%20DPA%20pack.%20Company%3A%20%0D%0AName%3A%20%0D%0ARole%3A%20" class="btn btn-gold">Request our Security &amp; DPA pack</a> <span style="color:#9aa6bd;font-size:12.5px;margin-left:8px">for IT &amp; procurement teams</span></div>
   <p style="color:#9aa6bd;font-size:13px;margin-top:22px;max-width:760px"><strong style="color:var(--ink)">Privacy:</strong> Veridiqa collects only the contact details you choose to send us and the market data you share for an engagement. We do not sell or share your information. To ask a question, request deletion, or sign an NDA before sharing data, email <a class="mail" style="color:var(--gold)" href="mailto:contact@veridiqa.net">contact@veridiqa.net</a>. See our full <a href="#legal" style="color:var(--gold)">Privacy &amp; Terms</a>.</p>
 </div></section>
 
@@ -833,13 +831,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   </div>
 </div></section>
 
-<section class="sec founder"><div class="wrap"><div class="fwrap">
+<section class="sec founder" id="promise"><div class="wrap"><div class="fwrap">
   <span class="eyebrow">Our promise</span>
   <p class="fquote">&ldquo;Pharma teams don&rsquo;t lack data &mdash; they lack a clear decision. Veridiqa turns the numbers you already have into the one answer you need, fast &mdash; and stands behind getting it right.&rdquo;</p>
   <p style="color:var(--mut);font-size:15px;margin-top:26px">Veridiqa is a specialist, pharma-native commercial-intelligence company, built by people with deep pharmaceutical commercial experience and enterprise-grade data engineering. Nexus Prism is our own platform and intellectual property, customized to each client&rsquo;s data and market. Every engagement is handled by a focused, accountable team under strict confidentiality.</p>
 </div></div></section>
 
-<section class="sec ctaf"><div class="wrap">
+<section class="sec ctaf" id="cta-demo"><div class="wrap">
   <h2 style="color:#fff">See it on your own data.</h2>
   <p style="color:#c7d2e6;max-width:560px;margin:14px auto 0">Book a 30-minute walkthrough and we&rsquo;ll show your market through Veridiqa &mdash; tailored to your portfolio.</p>
   <div style="margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap"><a href="#contact" class="btn btn-gold" style="font-size:16px;padding:15px 34px">Book your demo</a><a href="#contact" class="btn btn-ghost" style="font-size:16px;padding:15px 34px">Request demo access &rarr;</a></div>
@@ -854,13 +852,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <p style="margin-top:18px">Email: <a class="mail" href="mailto:contact@veridiqa.net">contact@veridiqa.net</a></p>
     <p style="margin-top:10px;color:#c7d2e6">Head office: Riyadh, Saudi Arabia &middot; serving clients globally</p>
   </div>
-  <form onsubmit="event.preventDefault();var f=this;var body='Name: '+encodeURIComponent(f.nm.value)+'%0D%0ACompany: '+encodeURIComponent(f.co.value)+'%0D%0AEmail: '+encodeURIComponent(f.em.value)+'%0D%0A%0D%0A'+encodeURIComponent(f.msg.value);window.location.href='mailto:contact@veridiqa.net?subject='+encodeURIComponent('Demo request — '+f.nm.value)+'&body='+body;f.querySelector('.ok').style.display='block';">
-    <label>Name</label><input name="nm" required placeholder="Your name">
-    <label>Work email</label><input name="em" required type="email" placeholder="you@company.com">
-    <label>Company</label><input name="co" placeholder="Company">
-    <label>How can we help?</label><textarea name="msg" rows="3" placeholder="Your portfolio / what you need"></textarea>
-    <button class="btn btn-gold" style="margin-top:16px;width:100%;border:none;cursor:pointer">Request a demo</button>
-    <p class="ok" style="display:none;color:var(--gold);margin-top:12px">Your email is ready in your mail app — hit send and we&rsquo;ll reply as soon as it reaches us.</p>
+  <form id="demoform" novalidate onsubmit="return vqSubmit(event)">
+    <label for="f-nm">Name</label><input id="f-nm" name="name" required placeholder="Your name" autocomplete="name">
+    <label for="f-em">Work email</label><input id="f-em" name="email" required type="email" placeholder="you@company.com" autocomplete="email">
+    <label for="f-co">Company</label><input id="f-co" name="company" placeholder="Company" autocomplete="organization">
+    <label for="f-jt">Job title <span style="opacity:.6">(optional)</span></label><input id="f-jt" name="job_title" placeholder="e.g. Commercial Director" autocomplete="organization-title">
+    <label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" rows="3" placeholder="Your portfolio / what you need"></textarea>
+    <button class="btn btn-gold" style="margin-top:16px;width:100%;border:none;cursor:pointer" aria-label="Submit demo request">Request a demo</button>
+    <p class="ok" style="display:none;color:var(--gold);margin-top:12px" role="status">Thank you &mdash; your request has been sent. We&rsquo;ll reply from contact@veridiqa.net shortly.</p>
+    <p class="err" style="display:none;color:#ffb4b4;margin-top:12px" role="alert">We couldn&rsquo;t reach the server &mdash; your email app is opening as a backup, or write to contact@veridiqa.net directly.</p>
   </form>
 </div></div></section>
 
@@ -880,7 +880,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 <footer><div class="wrap"><div class="row">
   <a class="brand" href="#top"><img src="v_logo.png" alt="Veridiqa" loading="lazy" style="height:30px"> VERIDIQA</a>
   <span>Verified intelligence for pharma · Nexus Prism</span>
-  <span><a href="#faq" style="color:#90a0bd">FAQ</a> &nbsp;·&nbsp; <a href="#trust" style="color:#90a0bd">Trust</a> &nbsp;·&nbsp; <a href="#legal" style="color:#90a0bd">Privacy &amp; terms</a> &nbsp;·&nbsp; © 2026 Veridiqa</span>
+  <span><a href="#faq" style="color:#90a0bd">FAQ</a> &nbsp;·&nbsp; <a href="#trust" style="color:#90a0bd">Trust</a> &nbsp;·&nbsp; <a href="#legal" style="color:#90a0bd">Privacy &amp; terms</a> &nbsp;·&nbsp; © <span id="yr">2026</span> Veridiqa</span>
 </div></div></footer>
 
 <script>
@@ -921,6 +921,42 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 })();
 </script>
 
+<script>
+/* dynamic copyright year */
+(function(){var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();})();
+
+/* platform-preview period selector (illustrative sample data) */
+(function(){
+  var P={YTD:{s:'72%',flag:'15',fix:'35',a:'88%',b:'79%',c:'64%',e:'52%',d:'33%'},
+         MAT:{s:'69%',flag:'14',fix:'38',a:'86%',b:'81%',c:'61%',e:'55%',d:'30%'},
+         QTR:{s:'74%',flag:'16',fix:'31',a:'90%',b:'77%',c:'66%',e:'50%',d:'36%'}};
+  function set(id,v){var el=document.getElementById(id);if(el)el.textContent=v;}
+  function apply(p){var d=P[p];if(!d)return;set('k-s',d.s);set('k-flag',d.flag);set('k-fix',d.fix);set('sc-a',d.a);set('sc-b',d.b);set('sc-c',d.c);set('sc-e',d.e);set('sc-d',d.d);}
+  var btns=document.querySelectorAll('.psel .pbtn');
+  btns.forEach(function(btn){btn.addEventListener('click',function(){
+    btns.forEach(function(o){o.classList.remove('active');o.setAttribute('aria-selected','false');});
+    btn.classList.add('active');btn.setAttribute('aria-selected','true');apply(btn.getAttribute('data-p'));});});
+})();
+
+/* contact form — real server-side capture via FormSubmit, mailto fallback */
+function vqSubmit(e){
+  e.preventDefault();
+  var f=e.target, b=f.querySelector('button'), ok=f.querySelector('.ok'), er=f.querySelector('.err');
+  ok.style.display='none'; er.style.display='none';
+  var nm=f.elements['name'].value.trim(), em=f.elements['email'].value.trim();
+  if(!nm||!em){er.textContent='Please add your name and work email.';er.style.display='block';return false;}
+  var lbl=b.textContent; b.disabled=true; b.textContent='Sending…';
+  var d={name:nm,email:em,company:f.elements['company'].value,job_title:f.elements['job_title'].value,message:f.elements['message'].value,_subject:'Demo request — '+nm,_template:'table'};
+  fetch('https://formsubmit.co/ajax/contact@veridiqa.net',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)})
+    .then(function(r){if(!r.ok)throw 0;return r.json();})
+    .then(function(){f.reset();ok.style.display='block';b.disabled=false;b.textContent=lbl;})
+    .catch(function(){b.disabled=false;b.textContent=lbl;er.style.display='block';
+      var body='Name: '+encodeURIComponent(d.name)+'%0D%0ACompany: '+encodeURIComponent(d.company)+'%0D%0AJob title: '+encodeURIComponent(d.job_title)+'%0D%0AEmail: '+encodeURIComponent(d.email)+'%0D%0A%0D%0A'+encodeURIComponent(d.message);
+      window.location.href='mailto:contact@veridiqa.net?subject='+encodeURIComponent('Demo request — '+d.name)+'&body='+body;});
+  return false;
+}
+</script>
+
 <button class="chatfab" id="chatfab" aria-label="Open Veridiqa assistant"><span class="pip"></span><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2z"/></svg></button>
 <div class="chatbox" id="chatbox" role="dialog" aria-label="Veridiqa assistant">
   <div class="cbhead">
@@ -953,6 +989,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
    {k:['price','pricing','cost','how much','fee','budget','expensive','quote'],a:"Pricing is tailored to your data scope and engagement type. After a short scoping call you get a clear, fixed quote — no hidden fees, no lock-in. Smart way to start: a single Market Audit on one data export, so you see the value before any platform commitment."},
    {k:['secure','security','privacy','confiden','gdpr','nda','safe','protect','dpa','residency'],a:"Your data stays yours: you keep full ownership, an NDA is signed before any data is shared, it's used only for your engagement and never resold, access is least-privilege, and it's returned or deleted on request. We complete your security questionnaire / DPA and work to your data-residency requirements."},
    {k:['subscription','iqvia','licence','license','new data','data source','my data','excel'],a:"No new data subscription needed. You send the market data you already license (e.g. an Excel export); Veridiqa adds the intelligence layer on top — and never resells or shares it."},
+   {k:['integrat','api','snowflake','databricks','veeva','data lake','connect','existing tool','stack','crm'],a:"Nexus Prism is built to fit your stack — secure API integration with enterprise data sources and CRM, alongside secure flat-file ingestion. It works with how your data already flows, so there's no rip-and-replace."},
+   {k:['arabic','bilingual','language','localis','localiz','rtl','عرب'],a:"The suite is bilingual — English and Arabic. Dashboards, reports and the Vela event app can be delivered in either language for your teams and HCPs."},
+   {k:['contract','cancel','lock-in','lock in','commitment','term length','notice period','exit clause','tie in'],a:"No long-term lock-in. Engagements run on a clear written agreement, and you can start with a single one-off Market Audit before any subscription. Your data is returned or deleted on request at the end of an engagement."},
    {k:['who is it for','who for','audience','which team','my role','right for me','suitable'],a:"Built for the people who carry the number: commercial & marketing leaders, product & portfolio managers, business development, market access & pricing, and BI/analytics teams who want a ready engine instead of months of build."},
    {k:['market','therapy','geography','country','region','global','where ','ksa','gcc','international'],a:"Any market and any therapy area — Veridiqa works with the market data you already license, so it isn't tied to one geography. We're headquartered in Riyadh, Saudi Arabia and serve clients globally."},
    {k:['proof','evidence','reliable','trust','accurate','verified','how do i know'],a:"Every figure traces back to the data you provided, and outputs are evidence-flagged. Where data is incomplete we flag it rather than fill the gap — no fabricated numbers, ever. Start with a single Market Audit and see the value on your own data before any commitment."},
